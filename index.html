@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Application </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .container { margin-top: 50px; }
+    .card { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center" data-aos="fade-down"  data-aos-duration="2500">CRUD Application</h1>
+  <form id="postForm" class="mb-5" data-aos="fade-right"  data-aos-duration="2500">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Enter title" required>
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea class="form-control" id="content" rows="3" placeholder="Enter content" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input type="url" class="form-control" id="image" placeholder="Enter image URL" required>
+    </div>
+    <button type="submit" class="btn btn-success px-5">Add Post</button>
+  </form>
+
+  <input type="text" id="search" class="form-control mb-4" placeholder="Search posts by title" data-aos="fade-left">
+
+  <div id="posts" class="row"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script src="index.js"></script>
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
